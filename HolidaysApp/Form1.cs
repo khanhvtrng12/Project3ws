@@ -72,7 +72,7 @@ namespace HolidaysApp
                     hasEmptyTextbox = true;
                    
                     MessageBox.Show("Lỗi! Dữ liệu ô thứ "+i+" trống!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    
+                   
                     textBox.Focus();
                     
                 }
@@ -219,5 +219,36 @@ namespace HolidaysApp
                 row.DefaultCellStyle.BackColor = Color.FromArgb(255,192,255);
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            bool hasEmptyTextbox = false;
+            int i = 0;
+            TextBox[] textBoxes = {
+                textBox9,
+            };
+
+            foreach (var textBox in textBoxes)
+            {
+                i++;
+
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    hasEmptyTextbox = true;
+
+                    MessageBox.Show("Lỗi! Dữ liệu tìm kiếm trống!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dataGridView1.DataSource = bs1.ReadAll();
+                    textBox.Focus();
+
+                }
+            }
+            if (!hasEmptyTextbox)
+            {
+                holidays hl1 = new holidays();
+                hl1.Holiday_date = textBox9.Text;
+                dataGridView1.DataSource = bs1.FindOne(hl1);
+            }
+                
+            }
     }
 }

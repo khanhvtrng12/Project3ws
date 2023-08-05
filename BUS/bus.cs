@@ -27,5 +27,10 @@ namespace BUS
             test ts1 = new test();
             return ts1.DeleteData(id);
         }
+        public DataTable FindOne(holidays hl1)
+        {
+            test ts1 = new test();
+            return ts1.SearchData(hl1);
+        }
     }
 }

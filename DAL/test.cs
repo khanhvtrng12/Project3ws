@@ -47,5 +47,12 @@ namespace DAL
             result = db.ExecuteNonQuery3(query) >0;
             return result;
         }
+        public DataTable SearchData(holidays holidaysDTO)
+        {
+            DataTable schemaTable = Load();
+            string sql = "SELECT * FROM " + _table +" WHERE  " + schemaTable.Columns[1].ColumnName+ " like '%" + holidaysDTO.Holiday_date.ToString() + "%'";
+            return db.ExecuteDataTable(sql);
+
+        }
     }
 }
