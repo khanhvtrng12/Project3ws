@@ -40,7 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.DateTimePicker();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -52,11 +52,11 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -272,11 +272,14 @@
             // 
             // textBox8
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(6, 33);
+            this.textBox8.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+            this.textBox8.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.textBox8.Location = new System.Drawing.Point(12, 33);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(390, 34);
+            this.textBox8.Size = new System.Drawing.Size(384, 34);
             this.textBox8.TabIndex = 0;
             // 
             // groupBox7
@@ -402,15 +405,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Holiday Date:";
             // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(6, 33);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(384, 34);
-            this.textBox2.TabIndex = 0;
-            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -458,6 +452,18 @@
             this.textBox9.Size = new System.Drawing.Size(240, 34);
             this.textBox9.TabIndex = 3;
             // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.CustomFormat = "dd-MM-yyyy";
+            this.textBox2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.textBox2.Location = new System.Drawing.Point(6, 33);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(384, 34);
+            this.textBox2.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -477,7 +483,6 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -489,7 +494,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -504,7 +508,6 @@
         private DataGridView dataGridView1;
         private Panel panel1;
         private GroupBox groupBox2;
-        private TextBox textBox2;
         private GroupBox groupBox1;
         private TextBox textBox1;
         private GroupBox groupBox3;
@@ -518,7 +521,6 @@
         private GroupBox groupBox7;
         private TextBox textBox7;
         private GroupBox groupBox8;
-        private TextBox textBox8;
         private Button button5;
         private Button button3;
         private Button button2;
@@ -527,5 +529,7 @@
         private TableLayoutPanel tableLayoutPanel3;
         private Button button4;
         private TextBox textBox9;
+        private DateTimePicker textBox8;
+        private DateTimePicker textBox2;
     }
 }
